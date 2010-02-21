@@ -46,3 +46,8 @@ All the programs use a set of command line options. For details just type :
 |$my_prompt> python <name_of_the_program.py> [ENTER]
 This will print the "help" menu of the program.
 
+Dependencies :
+==============
+
+The programs in this directory need a working version of Numpy.
+
