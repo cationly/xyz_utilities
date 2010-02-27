@@ -28,15 +28,19 @@ Content of the directory :
 - rotate_atomic_positions.py
 - translate_atomic_positions.py
 - sort_atomic_positions.py
+- duplicate_atomic_positions.py
 
 The names of the programs are pretty self-explanatory. Each program reads an xy
 z  formatted file, and then manipulates the atomic coordinates according to the
-type of operation selected (translation, rotation, sorting). When all the coord
-inates have been updated, an output file is created with the first 2 lines mat-
-ching perfectly the ones in the original file, and the subsequent lines contai-
-ning the updated coordinates.
+type of operation selected (translation, rotation, sorting, duplication).  When
+all the coordinates have been updated, an output file is created with the first
+2 lines matching  perfectly  the ones  in the original file, and the subsequent
+lines containing the updated coordinates (except  for the duplication operation
+where the program writes a new comment line  to indicate  how the original cell
+has been duplicated).
 
 The ouput file names are respectively :
+- <seedname>_duplicated for "duplicate_atomic_positions.py"
 - <seedname>_sorted     for "sort_atomic_positions.py"
 - <seedname>_translated for "translate_atomic_positions.py"
 - <seedname>_rotated    for "rotate_atomic_positions.py"
@@ -46,8 +50,11 @@ All the programs use a set of command line options. For details just type :
 |$my_prompt> python <name_of_the_program.py> [ENTER]
 This will print the "help" menu of the program.
 
+The "duplicate_atomic_positions.py" program is interactive in that the user has
+to answer some questions before the program can duplicate the coordinates. 
+
 Dependencies :
 ==============
 
-The programs in this directory need a working version of Numpy.
+Some programs in this directory need a working version of Numpy.
 
